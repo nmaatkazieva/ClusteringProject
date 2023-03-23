@@ -13,7 +13,7 @@ using namespace Clustering;
 /////////////////////////////////////////////
 CsvDataLoader::CsvDataLoader(std::string filePath)
 {
-	p_filePath = filePath;
+	p_filePath = filePath;		//init the file path
 }
 
 /////////////////////////////////////////////
@@ -21,8 +21,8 @@ CsvDataLoader::CsvDataLoader(std::string filePath)
 /////////////////////////////////////////////
 void CsvDataLoader::Process() noexcept
 {
-	std::map<std::string, std::vector<float>> csvData = ReadCsvData();
-	FillPointCloud(csvData);
+	std::map<std::string, std::vector<float>> csvData = ReadCsvData();		//load map of point cloud from csv
+	FillPointCloud(csvData);												//fill point cloud of Vertex2D
 }
 
 /////////////////////////////////////////////
@@ -30,7 +30,7 @@ void CsvDataLoader::Process() noexcept
 /////////////////////////////////////////////
 std::vector<Vertex2D> CsvDataLoader::GetData() noexcept
 {
-	return m_pointCloud;
+	return m_pointCloud;							//return point cloud
 }
 
 /////////////////////////////////////////////
@@ -86,7 +86,7 @@ void  CsvDataLoader::FillPointCloud(std::map<std::string, std::vector<float>> cs
 	//go through all way points and fill waypoints cloud
 	for (int index = 0; index < csvData["x"].size(); index++)
 	{
-		Vertex2D point{};
+		Vertex2D point{};					//create point
 		point.x = csvData["x"][index];		//set point's X
 		point.y = csvData["y"][index];		//set point's Y
 		m_pointCloud.push_back(point);		//add point to point cloud

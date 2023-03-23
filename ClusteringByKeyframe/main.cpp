@@ -8,6 +8,7 @@
 #include "CsvDataLoader.hpp"
 
 //#define RANDOM_POINTCLOUD_SECTION
+
 std::vector < Clustering:: Vertex2D > GenerateRandomPoints(int n) 
 {
 	std::random_device rd;

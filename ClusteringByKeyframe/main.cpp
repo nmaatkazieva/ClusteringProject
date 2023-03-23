@@ -32,8 +32,8 @@ int main()
 	 points = GenerateRandomPoints(100000);
 #endif //RANDOM_POINTCLOUD_SECTION
 
-	std::shared_ptr<Clustering::SegmentsBasedClustering> clusteringBySegments = std::make_shared<Clustering::SegmentsBasedClustering>();
-	std::shared_ptr<Clustering::CsvDataLoader> csvDataLoader = std::make_shared<Clustering::CsvDataLoader>("C:\\Users\\NasiMaatkazievastaff\\source\\repos\\ClusteringByKeyframe\\x64\\Debug\\resources\\point_cloud.csv");
+	std::shared_ptr<Clustering::SegmentsBasedClustering> clusteringBySegments = std::make_shared<Clustering::SegmentsBasedClustering>(10, 10, 8, 1);
+	std::shared_ptr<Clustering::CsvDataLoader> csvDataLoader = std::make_shared<Clustering::CsvDataLoader>("./resources/point_cloud.csv");
 
 	csvDataLoader->Process();
 	points = csvDataLoader->GetData();

@@ -46,7 +46,7 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\x64\Debug\resources\point_cloud.csv">
+    <None Include="resources\point_cloud.csv">
       <Filter>resources</Filter>
     </None>
   </ItemGroup>

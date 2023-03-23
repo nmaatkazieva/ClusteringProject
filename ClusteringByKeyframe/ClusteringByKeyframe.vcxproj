@@ -138,7 +138,7 @@
     <ClInclude Include="Vertex2D.h" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\x64\Debug\resources\point_cloud.csv" />
+    <None Include="resources\point_cloud.csv" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
